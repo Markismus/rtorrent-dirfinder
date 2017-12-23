@@ -3,12 +3,12 @@
 Quick and dirty script to migrate torrents into rtorrent.
 
 Workflow:
-a) Download torrentfiles and place them into a directory.
-b) Add them to rtorrent, e.g. press enter>directory/\*.torrent>press enter.
-c) Exit rtorrent.
-d) Run script rtorrent-dirfinder.
-e) Get coffee/play game.
-f) run rtorrent and rehash all torrents.
+ 1) Download torrentfiles and place them into a directory.
+ 2) Add them to rtorrent, e.g. press enter>directory/\*.torrent>press enter.
+ 3) Exit rtorrent.
+ 4) Run script rtorrent-dirfinder.
+ 5) Get coffee/play game.
+ 6) run rtorrent and rehash all torrents.
 
 
 What does the script do?
@@ -19,13 +19,17 @@ What does the script do?
 
 
 Change directory paths to your setup in the scriptlines:
-\# rtorrent install directory
+```
+# rtorrent install directory
 my $homedir="/home/markismus/rtorrent";
-\# First directory to search down from. Do not use root ('/'), since it'll take forever.
+# First directory to search down from. Do not use root ('/'), since it'll take forever.
 my $firstdir="/mnt/Games";
-\# Second directory to search down from. Point it at a small useless directory to effectively disable
+# Second directory to search down from. Point it at a small useless directory to effectively disable
 my $seconddir="/mnt/Comics";
 
-\# Standard directories defined in .rtorrent.rc
+# Standard directories defined in .rtorrent.rc
 my $downloaddir="$homedir/download";
 my $dir="$homedir/.session";
+```
+
+[licence-badge]:http://img.shields.io/badge/licence-AGPL-brightgreen.svg
